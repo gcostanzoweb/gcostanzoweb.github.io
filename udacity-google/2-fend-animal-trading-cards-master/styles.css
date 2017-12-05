@@ -1,0 +1,28 @@
+#container {
+  max-width: 330px;
+  box-shadow: 7px 7px 1px #eee;
+}
+
+#fact {
+  font-style: italic;
+}
+
+#list {
+  list-style-type: none;
+}
+
+.item {
+  font-weight: bold;
+}
+
+.bordered {
+  border: 1px solid #ccc;
+}
+
+.container {
+  margin: 15px;
+}
+
+.spaced {
+  padding: 0 15px;
+}

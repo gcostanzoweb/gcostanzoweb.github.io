@@ -1,0 +1,11 @@
+You've learned a lot about web development so far. I want you to take a moment to write down your thoughts about web development here. Answer the following questions:
+  * What new skills have you learned?
+  * What has been easy?
+  * What has been difficult?
+  * How have you used the problem solving strategies from the first project to overcome challenges so far?
+
+---
+
+Working with mockups is something completely new to me, so the most important thing I've learned is to create something identical to an existing base, rather than following an approximate idea of the final result.
+The easiest part of this project was using already-known HTML elements to format the text, and while researching the other necessary elements wasn't really difficult at all, it took some time to understand how to properly use them.
+The best strategy to complete this project was saving the .html file after each new addition and check what changed in my browser, as the Udacity Chrome Extension got me used to do in the previous lessons.
