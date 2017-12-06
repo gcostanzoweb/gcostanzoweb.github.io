@@ -1,5 +1,15 @@
 const MAX_WIDTH = 100;
 const MAX_HEIGHT = 200;
+var down = false;
+$(document)
+  .mousedown(function(){
+    down = true;
+    console.log("Mouse pressed.");
+  })
+  .mouseup(function(){
+    down = false;
+    console.log("Mouse released.");
+  });
 
 var colorPicker = $("#colorPicker");
 var sizePicker = $("#sizePicker");
@@ -28,6 +38,15 @@ for(var i=1; i<=h; i++){
 
 }
 
-$("table").on("click","td",function(event){
+function fill(event){
   $(event.target).css("background-color", colorPicker.val());
+}
+
+$("table").on("mouseenter", "td", function(event){
+  if(down){
+    fill(event);
+  }
 })
+.on("mousedown","td",function(event){
+  fill(event);
+});
