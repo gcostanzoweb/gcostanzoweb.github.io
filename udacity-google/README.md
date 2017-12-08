@@ -10,34 +10,44 @@ My personal portfolio for the projects proposed during the 2017 Udacity program:
 
 ### Changelog ###
 
-- 6 December 2017
-  - Project 3 edited: added code to color "pixels" by keeping the mouse pressed and overing the cells.
-  
-  Added:
-  ```javascript
-  var down = false;
-  $(document)
-  .mousedown(function(){
-     down = true;
-     console.log("Mouse pressed.");
-   })
-  .mouseup(function(){
-    down = false;
-    console.log("Mouse released.");
-  });
-  ```
-  Edited:
-  ```javascript
-  function fill(event){
-  $(event.target).css("background-color", colorPicker.val());
-  }
+- 8 December 2017
+  - Project 1 edited: 
+    - Changed some tags to their "semantic" respective: `article, header, time, summary, figure, details`.
+    - A `<sup>` was missing: fixed.
+  - Project 2 edited:
+    - Changed the tag for the main title from `h3` to `h1`
+    - Added a fixed `width` of `300` to the `img` tag
+  - Minor CSS fixes to Projects 1 & 2 (`font-size`,`text-align`, etc.)
 
-  $("table").on("mouseenter", "td", function(event){
-    if(down){
-      fill(event);
+- 6 December 2017
+  - Project 3 edited: 
+    - Added some line of code to color "pixels" by keeping the mouse pressed and overing the cells.
+  
+    Added:
+    ```javascript
+    var down = false;
+    $(document)
+    .mousedown(function(){
+       down = true;
+       console.log("Mouse pressed.");
+     })
+    .mouseup(function(){
+      down = false;
+      console.log("Mouse released.");
+    });
+    ```
+    Edited:
+    ```javascript
+    function fill(event){
+    $(event.target).css("background-color", colorPicker.val());
     }
-  })
-  .on("mousedown","td",function(event){
-    fill(event);
-  });
-  ```
+
+    $("table").on("mouseenter", "td", function(event){
+      if(down){
+        fill(event);
+      }
+    })
+    .on("mousedown","td",function(event){
+      fill(event);
+    });
+    ```
