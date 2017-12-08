@@ -1,5 +1,16 @@
-const MAX_WIDTH = 100;
-const MAX_HEIGHT = 200;
+const MAX_WIDTH = 80;
+const MAX_HEIGHT = 80;
+
+var bodyBackground = "white";
+function changeBG(color){
+$("body").css("background-color", color);
+}
+changeBG(bodyBackground);
+$("#bgColorPicker").on("change", function(){
+  bodyBackground = $(this).val();
+  changeBG(bodyBackground);
+});
+
 var down = false;
 $(document)
   .mousedown(function(){
@@ -18,11 +29,38 @@ sizePicker.on("submit",function(event){
   event.preventDefault();
   var h = $("#input_height").val();
   var w = $("#input_width").val();
+  if(h>0&&h<=MAX_HEIGHT&&w>0&&w<=MAX_WIDTH) $("#status").text(" ");
+  else{
+    var status = "[ ";
+
+    if(w<=0){
+      status += "The minimum width is 1. ";
+      w = 1;
+      $("#input_width").val(1);
+    }else if(w>MAX_WIDTH){
+      status += "The maximum width is "+MAX_WIDTH+". ";
+      w = MAX_WIDTH;
+      $("#input_width").val(MAX_WIDTH);
+    }
+
+    if(h<=0){
+      status += "The minimum height is 1. ";
+      h = 1;
+      $("#input_height").val(1);
+    }else if(h>MAX_HEIGHT){
+      status += "The maximum height is "+MAX_HEIGHT+". ";
+      h = MAX_HEIGHT;
+      $("#input_height").val(MAX_HEIGHT);
+    }
+
+    status += "]";
+
+    $("#status").text(status);
+  }
   makeGrid(h,w);
 });
 
 function makeGrid(h,w) {
-console.log("Table: "+h+"px x "+w+"px.");
 $("#pixel_canvas").children().remove();
 var trClass, tdClass, tr, td;
 for(var i=1; i<=h; i++){
@@ -49,4 +87,12 @@ $("table").on("mouseenter", "td", function(event){
 })
 .on("mousedown","td",function(event){
   fill(event);
+});
+
+$("#clearAll").on("click", function(){
+  $("#pixel_canvas").find("td").css("background-color", "transparent");
+});
+
+$("#colorAll").on("click", function(){
+  $("#pixel_canvas").find("td").css("background-color", colorPicker.val());
 });
