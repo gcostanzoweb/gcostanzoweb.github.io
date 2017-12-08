@@ -17,6 +17,13 @@ My personal portfolio for the projects proposed during the 2017 Udacity program:
   - Project 2 edited:
     - Changed the tag for the main title from `h3` to `h1`
     - Added a fixed `width` of `300` to the `img` tag
+  - Project 3 tweaked, following features added:
+    - Button to clear all pixels
+    - Button to color all pixels with the color picked
+    - Second color picker to change the page's background color
+    - Check for maximum and minimum values for height and width
+    - Status paragraph: the text changes or is added to report a problem to the user. (No actual use implemented so far)
+    - `$(someFunction)` method used to wait for the DOM to be ready
   - Minor CSS fixes to Projects 1 & 2 (`font-size`,`text-align`, etc.)
 
 - 6 December 2017
