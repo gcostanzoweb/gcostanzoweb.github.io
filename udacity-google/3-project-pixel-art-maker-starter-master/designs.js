@@ -1,5 +1,9 @@
+function script(){
 const MAX_WIDTH = 80;
 const MAX_HEIGHT = 80;
+
+$("#input_width").attr("max",MAX_WIDTH);
+$("#input_height").attr("max",MAX_HEIGHT);
 
 var bodyBackground = "white";
 function changeBG(color){
@@ -29,34 +33,6 @@ sizePicker.on("submit",function(event){
   event.preventDefault();
   var h = $("#input_height").val();
   var w = $("#input_width").val();
-  if(h>0&&h<=MAX_HEIGHT&&w>0&&w<=MAX_WIDTH) $("#status").text(" ");
-  else{
-    var status = "[ ";
-
-    if(w<=0){
-      status += "The minimum width is 1. ";
-      w = 1;
-      $("#input_width").val(1);
-    }else if(w>MAX_WIDTH){
-      status += "The maximum width is "+MAX_WIDTH+". ";
-      w = MAX_WIDTH;
-      $("#input_width").val(MAX_WIDTH);
-    }
-
-    if(h<=0){
-      status += "The minimum height is 1. ";
-      h = 1;
-      $("#input_height").val(1);
-    }else if(h>MAX_HEIGHT){
-      status += "The maximum height is "+MAX_HEIGHT+". ";
-      h = MAX_HEIGHT;
-      $("#input_height").val(MAX_HEIGHT);
-    }
-
-    status += "]";
-
-    $("#status").text(status);
-  }
   makeGrid(h,w);
 });
 
@@ -96,3 +72,5 @@ $("#clearAll").on("click", function(){
 $("#colorAll").on("click", function(){
   $("#pixel_canvas").find("td").css("background-color", colorPicker.val());
 });
+}
+$(script());
