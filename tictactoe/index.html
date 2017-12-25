@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  </head>
+  <body>
+    <h1>Tic Tac Toe</h1>
+    <p>The classic game to play with a friend when you're both bored.</p>
+    <br><br>
+    <table>
+      <tr id="tr1">
+        <td id="c1_1"><div> </div></td>
+        <td id="c1_2"><div> </div></td>
+        <td id="c1_3"><div> </div></td>
+      </tr>
+      <tr id="tr2">
+        <td id="c2_1"><div> </div></td>
+        <td id="c2_2"><div> </div></td>
+        <td id="c2_3"><div> </div></td>
+      </tr>
+      <tr id="tr3">
+        <td id="c3_1"><div> </div></td>
+        <td id="c3_2"><div> </div></td>
+        <td id="c3_3"><div> </div></td>
+      </tr>
+    </table><br>
+    <div id="status">
+	<!--
+      <b>Font:</b> <input type="color" id="fontColor"> - <b>Background:</b> <input type="color" id="bgColor"> -
+	-->
+<b>Round:</b> <span id="round">1</span> -
+      <b>Turn:</b> Player <span id="player">1</span> - <input type="submit" id="newGame" value="New Game">
+      <span id="victorySpan" class="invisible">- Player <span id="winner"></span> won!</span>
+      <span id="tieSpan" class="invisible">- It's a tie!</span>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
