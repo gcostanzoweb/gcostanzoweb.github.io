@@ -1,28 +1,89 @@
-#container {
-  max-width: 330px;
-  box-shadow: 7px 7px 1px #eee;
+/* Styling for the "Animal Trading Cards" page. */
+
+/* General setting for the page */
+
+body, html {
+  padding:0;
+  margin:0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
 }
 
-#fact {
-  font-style: italic;
+/* Styling for the whole card */
+
+#card {
+  width: 334px;
+  margin: 15px;
+  border: 3px dotted #ccc;
+  border-radius: 5px;
 }
 
-#list {
-  list-style-type: none;
+#card:hover {
+  box-shadow: 5px 5px 1px #eee;
 }
 
-.item {
-  font-weight: bold;
-}
+/* The animal's name */
 
-.bordered {
+#name {
+  margin: 15px;
+  padding: 5px;
+  text-align: center;
   border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.5em;
 }
 
-.container {
+#name:hover {
+  box-shadow: 3px 3px 1px #eee;
+}
+
+/* The animal's picture */
+
+#image {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0 15px;
+  padding: 1px;
+}
+
+#image:hover {
+  box-shadow: 3px 3px 1px #eee;
+}
+
+/* The whole info box */
+
+#infos {
+  border: 1px solid #ccc;
+  border-radius: 5px;
   margin: 15px;
 }
 
-.spaced {
-  padding: 0 15px;
+#infos:hover {
+  box-shadow: 3px 3px 1px #eee;
 }
+
+  /* The interesting fact */
+
+  #fact {
+    margin: 15px;
+    font-style: italic;
+    text-align: center;
+  }
+
+  /* The fact list */
+
+  #list {
+    padding: 0;
+    margin: 0 15px;
+    list-style-type: none;
+  }
+
+  .item {
+    font-weight: bold;
+  }
+
+  /* The general description */
+
+  #desc {
+    margin: 15px;
+  }
