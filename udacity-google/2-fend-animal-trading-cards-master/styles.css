@@ -13,6 +13,7 @@ body, html {
 
 #card {
   width: 334px;
+  background-color: #CBE32D;
   margin: 15px;
   border: 3px dotted #ccc;
   border-radius: 5px;
@@ -25,6 +26,7 @@ body, html {
 /* The animal's name */
 
 #name {
+  background-color: #F3FAB6;
   margin: 15px;
   padding: 5px;
   text-align: center;
@@ -34,12 +36,13 @@ body, html {
 }
 
 #name:hover {
-  box-shadow: 3px 3px 1px #eee;
+  box-shadow: 3px 3px 1px #A8CD1B;
 }
 
 /* The animal's picture */
 
 #image {
+  background-color: #F3FAB6;
   border: 1px solid #ccc;
   border-radius: 5px;
   margin: 0 15px;
@@ -47,19 +50,20 @@ body, html {
 }
 
 #image:hover {
-  box-shadow: 3px 3px 1px #eee;
+  box-shadow: 3px 3px 1px #A8CD1B;
 }
 
 /* The whole info box */
 
 #infos {
+  background-color: #F3FAB6;
   border: 1px solid #ccc;
   border-radius: 5px;
   margin: 15px;
 }
 
 #infos:hover {
-  box-shadow: 3px 3px 1px #eee;
+  box-shadow: 3px 3px 1px #A8CD1B;
 }
 
   /* The interesting fact */
