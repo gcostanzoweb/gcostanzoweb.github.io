@@ -37,14 +37,15 @@
 </style>
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>Gabriele Costanzo</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<h1>Work in Progress</h1>
 
-<figure>
+<!--<figure>
 	<img alt="Success Kid" src="{successkid}">
 	<figcaption>Have fun with Sapper!</figcaption>
 </figure>
 
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>-->
+<p>Come back again, more info on my work soon!</p>
